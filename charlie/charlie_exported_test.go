@@ -30,4 +30,8 @@ func TestIs(t *testing.T) {
 	I.Set(1)
 	require.True(I.Is())
 	require.False(I.Isnt())
+
+	// Conclusions: This is actually all I wanted in terms of the behavior of the above methods.
+	// However, because I{} leads to panics(voluntarily; or the inability to set otherwise),
+	// the I class fails to meet the objective of "empty struct is an (working) undefined".
 }
